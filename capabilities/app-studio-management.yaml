@@ -1,0 +1,63 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon App Studio Application Management
+  description: Workflow for managing App Studio low-code applications.
+  tags:
+  - Amazon
+  - App Studio
+  - AWS
+  - Low-Code
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - import: amazon-app-studio
+    location: ./shared/amazon-app-studio.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: app-studio-management-api
+    resources:
+    - path: /v1/apps
+      name: apps
+      operations:
+      - method: GET
+        name: list-apps
+        description: List applications.
+        call: amazon-app-studio.list-apps
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: app-studio-management-mcp
+    transport: http
+    tools:
+    - name: list-app-studio-apps
+      description: List all Amazon App Studio applications in the account.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-app-studio.list-apps
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-app-studio-app
+      description: Get details for a specific App Studio application by ID.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-app-studio.get-app
+      with:
+        appId: tools.appId
+      outputParameters:
+      - type: object
+        mapping: $.

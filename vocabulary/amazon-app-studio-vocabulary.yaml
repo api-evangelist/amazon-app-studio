@@ -1,0 +1,70 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon App Studio
+  description: Vocabulary for Amazon App Studio API surface covering low-code application lifecycle management.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - namespace: amazon-app-studio
+    name: Amazon App Studio API
+    version: '2024-11-01'
+    baseUrl: https://appstudio.{region}.amazonaws.com
+    status: active
+  resources:
+  - name: apps
+    description: App Studio low-code applications.
+    apis:
+    - amazon-app-studio
+    actions:
+    - list
+    - get
+  actions:
+  - name: list
+    description: List resources.
+    httpMethod: GET
+    pattern: query
+  - name: get
+    description: Get a resource.
+    httpMethod: GET
+    pattern: read
+  authentication:
+    schemes:
+    - type: aws-sigv4
+      description: AWS Signature Version 4.
+      service: appstudio
+capability:
+  workflows:
+  - name: App Studio Application Management
+    file: capabilities/app-studio-management.yaml
+    description: Manage App Studio low-code applications.
+    apisCombined:
+    - Amazon App Studio API
+    toolCount: 2
+    personas:
+    - Business Developer
+    - IT Administrator
+  personas:
+  - id: business-developer
+    name: Business Developer
+    description: Business user building internal tools with App Studio.
+    workflows:
+    - App Studio Application Management
+  - id: it-administrator
+    name: IT Administrator
+    description: IT admin managing App Studio deployments and access.
+    workflows:
+    - App Studio Application Management
+  namespaces:
+    consumed:
+    - amazon-app-studio
+    rest:
+    - app-studio-management-api (port 8080)
+    - amazon-app-studio-api (port 8116)
+    mcp:
+    - app-studio-management-mcp (port 9090)
+    - amazon-app-studio-mcp (port 9116)
+  binds:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - AWS_REGION

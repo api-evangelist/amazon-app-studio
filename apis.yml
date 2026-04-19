@@ -1,16 +1,111 @@
 aid: amazon-app-studio
 name: Amazon App Studio
 description: >-
-  Amazon App Studio provides API capabilities.
+  Amazon App Studio is a generative AI-powered low-code application builder that enables business users to create internal applications without requiring extensive coding knowledge. Built on AWS infrastructure,
+  App Studio integrates with AWS data sources and services to enable rapid development of enterprise business tools.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags: []
+tags:
+- AWS
+- Generative AI
+- Internal Tools
+- Low-Code
+- No-Code
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-app-studio/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-03-16'
+modified: '2026-04-19'
 specificationVersion: '0.19'
-apis: []
+apis:
+- aid: amazon-app-studio:app-studio-api
+  name: Amazon App Studio API
+  description: The Amazon App Studio API provides programmatic access to App Studio application management, enabling automation of low-code application lifecycle operations including listing and 
+    retrieving application details.
+  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+  humanURL: https://aws.amazon.com/app-studio/
+  baseURL: https://appstudio.amazonaws.com
+  tags:
+  - AWS
+  - Low-Code
+  - No-Code
+  properties:
+  - type: Documentation
+    url: https://docs.aws.amazon.com/app-studio/
+  - type: OpenAPI
+    url: openapi/amazon-app-studio-openapi.yaml
+  - type: JSONSchema
+    url: json-schema/amazon-app-studio-app-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-studio-appsummary-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-app-studio-listappsresponse-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-app-studio-app-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-app-studio-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/app-studio/pricing/
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+common:
+- type: Portal
+  url: https://aws.amazon.com/
+- type: Website
+  url: https://aws.amazon.com/app-studio/
+- type: Documentation
+  url: https://docs.aws.amazon.com/app-studio/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Blog
+  url: https://aws.amazon.com/blogs/
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: Console
+  url: https://us-east-1.console.aws.amazon.com/appstudio/
+- type: SignUp
+  url: https://signin.aws.amazon.com/signup?request_type=register
+- type: Status
+  url: https://health.aws.amazon.com/health/status
+- type: SpectralRules
+  url: rules/amazon-app-studio-spectral-rules.yml
+- type: NaftikoCapability
+  url: capabilities/app-studio-management.yaml
+- type: Vocabulary
+  url: vocabulary/amazon-app-studio-vocabulary.yaml
+- type: Features
+  data:
+  - name: Generative AI Application Builder
+    description: Use natural language prompts to generate application layouts, data models, and logic with Amazon Q assistance.
+  - name: No-Code Application Development
+    description: Build internal business applications using drag-and-drop components without writing code.
+  - name: AWS Data Source Integration
+    description: Connect applications to AWS DynamoDB, Aurora, S3, and other data sources with built-in connectors.
+  - name: Role-Based Access Control
+    description: Configure fine-grained access permissions for application users using AWS IAM Identity Center.
+  - name: One-Click Deployment
+    description: Deploy internal applications with a single click and share with team members using AWS access controls.
+- type: UseCases
+  data:
+  - name: Internal Business Tools
+    description: Build inventory management, employee onboarding, and operational dashboards for internal business use.
+  - name: Data Entry Applications
+    description: Create forms and data entry tools connected to existing databases for field operations and back-office teams.
+  - name: Workflow Automation
+    description: Automate approval workflows, task management, and process tracking with connected business logic.
+  - name: IT Self-Service Portals
+    description: Build IT request portals, asset management tools, and helpdesk applications for internal teams.
+- type: Integrations
+  data:
+  - name: Amazon DynamoDB
+    description: Connect App Studio applications to DynamoDB for serverless NoSQL data storage and retrieval.
+  - name: Amazon Aurora
+    description: Use Aurora as a relational database backend for App Studio applications requiring structured data.
+  - name: AWS IAM Identity Center
+    description: Manage user access to App Studio applications using IAM Identity Center for single sign-on.
+  - name: Amazon Q
+    description: Leverage Amazon Q generative AI capabilities within App Studio for AI-assisted application development.

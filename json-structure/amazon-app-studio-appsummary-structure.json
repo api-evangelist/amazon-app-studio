@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/extended/v0/#",
+  "name": "AppSummary",
+  "type": "record",
+  "fields": [
+    {
+      "name": "appId",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    },
+    {
+      "name": "createdAt",
+      "type": "datetime"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon App Studio API
+  description: Shared capability for managing App Studio low-code applications.
+  tags:
+  - Amazon
+  - App Studio
+  - AWS
+  - Low-Code
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-app-studio
+    baseUri: https://appstudio.{region}.amazonaws.com
+    description: Amazon App Studio API
+    authentication:
+      type: aws-sigv4
+      service: appstudio
+    resources:
+    - name: apps
+      path: /apps
+      description: Manage App Studio applications.
+      operations:
+      - name: list-apps
+        method: GET
+        description: List all applications.
+        inputParameters: []
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8116
+    namespace: amazon-app-studio-api
+    resources:
+    - path: /v1/apps
+      name: apps
+      operations:
+      - method: GET
+        name: list-apps
+        description: List apps.
+        call: amazon-app-studio.list-apps
+        with: {}
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9116
+    namespace: amazon-app-studio-mcp
+    transport: http
+    tools:
+    - name: list-app-studio-apps
+      description: List all Amazon App Studio applications in the account.
+      hints:
+        readOnly: true
+        openWorld: false
+      call: amazon-app-studio.list-apps
+      with: {}
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ListAppsResponse",
+  "description": "Response containing list of App Studio applications.",
+  "type": "object",
+  "properties": {
+    "apps": {
+      "type": "array",
+      "description": "List of applications.",
+      "items": {
+        "$ref": "#/definitions/AppSummary"
+      }
+    },
+    "nextToken": {
+      "type": "string",
+      "description": "Pagination token for next page."
+    }
+  }
+}
