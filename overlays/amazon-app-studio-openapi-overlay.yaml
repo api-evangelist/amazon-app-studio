@@ -1,0 +1,37 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Amazon App Studio API
+  version: 1.0.0
+extends: openapi/amazon-app-studio-openapi.yaml
+x-provenance:
+  generated: '2026-06-20'
+  method: generated
+  source: openapi/amazon-app-studio-openapi.yaml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-slug: amazon-app-studio
+    x-apievangelist-tags:
+    - AWS
+    - Generative AI
+    - Low-Code
+    - No-Code
+    - Internal Tools
+    x-apievangelist-docs: https://docs.aws.amazon.com/appstudio/latest/userguide/welcome.html
+- target: $.info
+  update:
+    x-authentication: AWS Signature Version 4 (bearer scheme) via IAM Identity Center
+- target: $.paths['/apps'].get
+  update:
+    x-pagination:
+      style: token
+      request_param: nextToken
+      limit_param: maxResults
+      response_field: nextToken
+- target: $.components.schemas.App.properties.status
+  update:
+    x-value-set:
+    - CREATING
+    - ACTIVE
+    - DELETING
+    - FAILED

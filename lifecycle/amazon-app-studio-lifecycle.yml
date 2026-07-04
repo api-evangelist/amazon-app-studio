@@ -1,0 +1,19 @@
+generated: '2026-06-20'
+method: searched
+source: https://docs.aws.amazon.com/appstudio/latest/userguide/
+versioning:
+  scheme: date-based
+  current: '2024-11-01'
+  evidence: OpenAPI info.version is a date stamp (AWS service API versioning convention)
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No published Sunset/Deprecation (RFC 8594) header policy found for App Studio
+sla:
+  url: https://aws.amazon.com/legal/service-level-agreements/
+  uptime_target: null
+quotas:
+  url: https://docs.aws.amazon.com/appstudio/latest/userguide/quotas.html
+status_page: https://health.aws.amazon.com/health/status
+doc_history: https://docs.aws.amazon.com/appstudio/latest/userguide/doc-history.html
+deprecated_operations: []

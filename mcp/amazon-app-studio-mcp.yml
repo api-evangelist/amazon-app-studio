@@ -1,0 +1,19 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+source: openapi/amazon-app-studio-openapi.yaml
+note: >-
+  No official first-party or hosted Model Context Protocol server was found for
+  Amazon App Studio in AWS docs, the aws GitHub org, npm (@modelcontextprotocol),
+  or public MCP registries. The tool list below is a candidate derived one-to-one
+  from the OpenAPI operations in this repo.
+server:
+  name: amazon-app-studio
+  transport: stdio
+tools:
+- name: list_apps
+  description: Returns a list of all App Studio applications in the account.
+  source_operation: openapi/amazon-app-studio-openapi.yaml#ListApps
+- name: get_app
+  description: Returns details for a specific App Studio application.
+  source_operation: openapi/amazon-app-studio-openapi.yaml#GetApp

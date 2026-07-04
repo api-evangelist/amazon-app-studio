@@ -1,0 +1,35 @@
+generated: '2026-06-20'
+method: searched
+source: https://aws.amazon.com/.well-known/security.txt
+hosts:
+- host: https://aws.amazon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: amazon-app-studio-security.txt
+- host: https://appstudio.amazonaws.com
+  note: API host did not resolve / no HTTP response (connection failed) at probe time
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0
+- host: https://appstudio.us-east-1.amazonaws.com
+  note: Regional API host did not resolve / no HTTP response (connection failed) at probe time
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+  - path: /.well-known/openid-configuration
+    status: 0
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+  - path: /.well-known/api-catalog
+    status: 0
+  - path: /.well-known/ai-plugin.json
+    status: 0

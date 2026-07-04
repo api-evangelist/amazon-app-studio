@@ -1,0 +1,20 @@
+generated: '2026-06-20'
+method: derived
+format: none
+source: openapi/amazon-app-studio-openapi.yaml
+note: >-
+  Derived from OpenAPI 4xx/5xx responses. Responses carry plain descriptions only
+  (no application/problem+json schema), so no RFC 9457 type URIs are defined by the spec.
+problems:
+- status: 400
+  title: Bad request
+  source_operation: openapi/amazon-app-studio-openapi.yaml#ListApps
+- status: 500
+  title: Internal server error
+  source_operation: openapi/amazon-app-studio-openapi.yaml#ListApps
+- status: 404
+  title: Application not found
+  source_operation: openapi/amazon-app-studio-openapi.yaml#GetApp
+- status: 500
+  title: Internal server error
+  source_operation: openapi/amazon-app-studio-openapi.yaml#GetApp

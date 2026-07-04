@@ -14,7 +14,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-app-studio/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-app-studio:app-studio-api
@@ -45,6 +45,8 @@ apis:
     url: json-ld/amazon-app-studio-context.jsonld
   - type: Pricing
     url: https://aws.amazon.com/app-studio/pricing/
+  - type: Overlay
+    url: overlays/amazon-app-studio-openapi-overlay.yaml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -77,6 +79,20 @@ common:
   url: capabilities/app-studio-management.yaml
 - type: Vocabulary
   url: vocabulary/amazon-app-studio-vocabulary.yaml
+- type: LLMsTxt
+  url: llms/amazon-app-studio-llms.txt
+- type: WellKnown
+  url: well-known/amazon-app-studio-well-known.yml
+- type: SecurityTxt
+  url: well-known/amazon-app-studio-security.txt
+- type: MCPServer
+  url: mcp/amazon-app-studio-mcp.yml
+- type: Conformance
+  url: conformance/amazon-app-studio-conformance.yml
+- type: ErrorCatalog
+  url: errors/amazon-app-studio-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/amazon-app-studio-lifecycle.yml
 - type: Features
   data:
   - name: Generative AI Application Builder
