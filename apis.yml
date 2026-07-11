@@ -51,6 +51,14 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: TrustCenter
+  url: security/amazon-app-studio-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-app-studio-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-app-studio-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-app-studio-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/
 - type: Website
