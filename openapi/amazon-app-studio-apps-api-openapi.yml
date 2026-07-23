@@ -1,0 +1,148 @@
+openapi: 3.0.3
+info:
+  title: Amazon App Studio Apps API
+  description: Amazon App Studio is a generative AI-powered low-code application builder that enables builders to quickly develop internal business applications. This API provides programmatic access to App Studio application management and deployment capabilities.
+  version: '2024-11-01'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/support/
+servers:
+- url: https://appstudio.{region}.amazonaws.com
+  description: Amazon App Studio endpoint
+  variables:
+    region:
+      default: us-east-1
+      description: AWS region
+security:
+- BearerAuth: []
+tags:
+- name: Apps
+paths:
+  /apps:
+    get:
+      operationId: ListApps
+      summary: Amazon App Studio List Apps
+      description: Returns a list of all App Studio applications in the account.
+      tags:
+      - Apps
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: integer
+        description: Maximum number of results to return.
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token.
+      responses:
+        '200':
+          description: Successful list of applications.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListAppsResponse'
+        '400':
+          description: Bad request.
+        '500':
+          description: Internal server error.
+  /apps/{appId}:
+    get:
+      operationId: GetApp
+      summary: Amazon App Studio Get App
+      description: Returns details for a specific App Studio application.
+      tags:
+      - Apps
+      parameters:
+      - name: appId
+        in: path
+        required: true
+        schema:
+          type: string
+        description: The unique identifier of the application.
+      responses:
+        '200':
+          description: Application details.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/App'
+        '404':
+          description: Application not found.
+        '500':
+          description: Internal server error.
+components:
+  schemas:
+    App:
+      type: object
+      description: An Amazon App Studio application.
+      properties:
+        appId:
+          type: string
+          description: Unique identifier for the application.
+        name:
+          type: string
+          description: Display name of the application.
+        description:
+          type: string
+          description: Description of the application purpose.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          description: Current status of the application.
+        createdAt:
+          type: string
+          format: date-time
+          description: Timestamp when the application was created.
+        updatedAt:
+          type: string
+          format: date-time
+          description: Timestamp when the application was last updated.
+      required:
+      - appId
+      - name
+      - status
+    ListAppsResponse:
+      type: object
+      description: Response containing list of App Studio applications.
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/AppSummary'
+          description: List of applications.
+        nextToken:
+          type: string
+          description: Pagination token for next page.
+    AppSummary:
+      type: object
+      description: Summary information for an App Studio application.
+      properties:
+        appId:
+          type: string
+          description: Unique identifier for the application.
+        name:
+          type: string
+          description: Display name of the application.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          description: Current status of the application.
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp.
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: AWS Sig V4
