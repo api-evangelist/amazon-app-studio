@@ -4,7 +4,19 @@ description: >-
   Amazon App Studio is a generative AI-powered low-code application builder that enables business users to create internal applications without requiring extensive coding knowledge. Built on AWS infrastructure,
   App Studio integrates with AWS data sources and services to enable rapid development of enterprise business tools.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-app-studio.png
 tags:
 - AWS
 - Generative AI
@@ -17,22 +29,18 @@ created: '2026-03-16'
 modified: '2026-06-20'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-app-studio:app-studio-api
-  name: Amazon App Studio API
-  description: The Amazon App Studio API provides programmatic access to App Studio application management, enabling automation of low-code application lifecycle operations including listing and 
-    retrieving application details.
-  image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+- aid: amazon-app-studio:amazon-app-studio-apps-api
+  name: Amazon App Studio Apps API
+  description: The Apps API from Amazon App Studio — 2 operation(s) for apps.
   humanURL: https://aws.amazon.com/app-studio/
   baseURL: https://appstudio.amazonaws.com
   tags:
-  - AWS
-  - Low-Code
-  - No-Code
+  - Apps
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-app-studio-apps-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/app-studio/
-  - type: OpenAPI
-    url: openapi/amazon-app-studio-openapi.yaml
   - type: JSONSchema
     url: json-schema/amazon-app-studio-app-schema.json
   - type: JSONSchema
@@ -45,8 +53,6 @@ apis:
     url: json-ld/amazon-app-studio-context.jsonld
   - type: Pricing
     url: https://aws.amazon.com/app-studio/pricing/
-  - type: Overlay
-    url: overlays/amazon-app-studio-openapi-overlay.yaml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
