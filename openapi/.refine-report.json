@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-app-studio",
+  "sources": [
+    "amazon-app-studio-apps-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-app-studio-apps-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
