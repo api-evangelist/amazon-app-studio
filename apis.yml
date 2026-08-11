@@ -57,6 +57,8 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 common:
+- type: Overlay
+  url: overlays/amazon-app-studio-openapi-overlay.yaml
 - type: AgenticAccess
   url: agentic-access/amazon-app-studio-agentic-access.yml
 - type: TrustCenter
