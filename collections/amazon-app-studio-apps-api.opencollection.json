@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon App Studio Apps API",
+    "version": "2024-11-01"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Apps",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon App Studio List Apps",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appstudio.{region}.amazonaws.com/apps",
+            "params": [
+              {
+                "name": "maxResults",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "nextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token."
+              }
+            ]
+          },
+          "docs": "Returns a list of all App Studio applications in the account."
+        },
+        {
+          "info": {
+            "name": "Amazon App Studio Get App",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://appstudio.{region}.amazonaws.com/apps/:appId",
+            "params": [
+              {
+                "name": "appId",
+                "value": "",
+                "type": "path",
+                "description": "The unique identifier of the application."
+              }
+            ]
+          },
+          "docs": "Returns details for a specific App Studio application."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
