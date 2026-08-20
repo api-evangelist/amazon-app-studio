@@ -35,6 +35,8 @@ apis:
     humanURL: https://aws.amazon.com/app-studio/
     baseURL: https://appstudio.amazonaws.com
     tags:
+      - Application
+    tags_raw:
       - Apps
     properties:
       - type: OpenAPI
