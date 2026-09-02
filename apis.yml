@@ -155,3 +155,5 @@ common:
         description: Manage user access to App Studio applications using IAM Identity Center for single sign-on.
       - name: Amazon Q
         description: Leverage Amazon Q generative AI capabilities within App Studio for AI-assisted application development.
+x-parent: aws
+x-relationship: product
