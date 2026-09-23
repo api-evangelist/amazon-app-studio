@@ -74,6 +74,40 @@ paths:
           description: Internal server error.
 components:
   schemas:
+    AppSummary:
+      type: object
+      description: Summary information for an App Studio application.
+      properties:
+        appId:
+          type: string
+          description: Unique identifier for the application.
+        name:
+          type: string
+          description: Display name of the application.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          description: Current status of the application.
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp.
+    ListAppsResponse:
+      type: object
+      description: Response containing list of App Studio applications.
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/AppSummary'
+          description: List of applications.
+        nextToken:
+          type: string
+          description: Pagination token for next page.
     App:
       type: object
       description: An Amazon App Studio application.
@@ -107,40 +141,6 @@ components:
       - appId
       - name
       - status
-    ListAppsResponse:
-      type: object
-      description: Response containing list of App Studio applications.
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/AppSummary'
-          description: List of applications.
-        nextToken:
-          type: string
-          description: Pagination token for next page.
-    AppSummary:
-      type: object
-      description: Summary information for an App Studio application.
-      properties:
-        appId:
-          type: string
-          description: Unique identifier for the application.
-        name:
-          type: string
-          description: Display name of the application.
-        status:
-          type: string
-          enum:
-          - CREATING
-          - ACTIVE
-          - DELETING
-          - FAILED
-          description: Current status of the application.
-        createdAt:
-          type: string
-          format: date-time
-          description: Creation timestamp.
   securitySchemes:
     BearerAuth:
       type: http
