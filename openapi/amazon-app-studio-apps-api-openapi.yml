@@ -74,6 +74,18 @@ paths:
           description: Internal server error.
 components:
   schemas:
+    ListAppsResponse:
+      type: object
+      description: Response containing list of App Studio applications.
+      properties:
+        apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/AppSummary'
+          description: List of applications.
+        nextToken:
+          type: string
+          description: Pagination token for next page.
     AppSummary:
       type: object
       description: Summary information for an App Studio application.
@@ -129,18 +141,6 @@ components:
       - appId
       - name
       - status
-    ListAppsResponse:
-      type: object
-      description: Response containing list of App Studio applications.
-      properties:
-        apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/AppSummary'
-          description: List of applications.
-        nextToken:
-          type: string
-          description: Pagination token for next page.
   securitySchemes:
     BearerAuth:
       type: http
