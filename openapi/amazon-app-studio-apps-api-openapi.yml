@@ -86,28 +86,6 @@ components:
         nextToken:
           type: string
           description: Pagination token for next page.
-    AppSummary:
-      type: object
-      description: Summary information for an App Studio application.
-      properties:
-        appId:
-          type: string
-          description: Unique identifier for the application.
-        name:
-          type: string
-          description: Display name of the application.
-        status:
-          type: string
-          enum:
-          - CREATING
-          - ACTIVE
-          - DELETING
-          - FAILED
-          description: Current status of the application.
-        createdAt:
-          type: string
-          format: date-time
-          description: Creation timestamp.
     App:
       type: object
       description: An Amazon App Studio application.
@@ -141,6 +119,28 @@ components:
       - appId
       - name
       - status
+    AppSummary:
+      type: object
+      description: Summary information for an App Studio application.
+      properties:
+        appId:
+          type: string
+          description: Unique identifier for the application.
+        name:
+          type: string
+          description: Display name of the application.
+        status:
+          type: string
+          enum:
+          - CREATING
+          - ACTIVE
+          - DELETING
+          - FAILED
+          description: Current status of the application.
+        createdAt:
+          type: string
+          format: date-time
+          description: Creation timestamp.
   securitySchemes:
     BearerAuth:
       type: http
