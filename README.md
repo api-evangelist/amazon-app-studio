@@ -1,4 +1,4 @@
-# Amazon App Studio (amazon-app-studio)
+# Amazon App Studio
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,122 +66,160 @@
 
 Amazon App Studio is a generative AI-powered low-code application builder that enables business users to create internal applications without requiring extensive coding knowledge. Built on AWS infrastructure, App Studio integrates with AWS data sources and services to enable rapid development of enterprise business tools.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/amazon-app-studio/refs/heads/main/apis.yml)
+**Areas:** AWS · Generative AI · Internal Tools · Low-Code · No-Code
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon App Studio on APIs.io
 
-## Tags:
+Everything profiled for Amazon App Studio is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-app-studio/](https://apis.io/providers/amazon-app-studio/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Generative AI, Internal Tools, Low-Code, No-Code
+### APIs (1)
 
-## Timestamps
+- [Amazon App Studio Apps API](https://apis.io/apis/amazon-app-studio/amazon-app-studio-apps-api/) — The Apps API from Amazon App Studio — 2 operation(s) for apps.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon App Studio API
-The Amazon App Studio API provides programmatic access to App Studio application management, enabling automation of low-code application lifecycle operations including listing and retrieving application details.
+#### MCP servers (1)
 
-**Human URL:** [https://aws.amazon.com/app-studio/](https://aws.amazon.com/app-studio/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags:
+- [amazon-app-studio](https://apis.io/servers/amazon-app-studio/amazon-app-studio/)
 
- - AWS, Low-Code, No-Code
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [Documentation](https://docs.aws.amazon.com/app-studio/)
-- [OpenAPI](openapi/amazon-app-studio-openapi.yaml)
-- [JSONSchema](json-schema/amazon-app-studio-app-schema.json)
-- [JSONSchema](json-schema/amazon-app-studio-appsummary-schema.json)
-- [JSONSchema](json-schema/amazon-app-studio-listappsresponse-schema.json)
-- [JSONStructure](json-structure/amazon-app-studio-app-structure.json)
-- [JSONLD](json-ld/amazon-app-studio-context.jsonld)
-- [Pricing](https://aws.amazon.com/app-studio/pricing/)
+- [Amazon App Studio Agentic Access](https://apis.io/agentic-access/amazon-app-studio/amazon-app-studio-agentic-access/)
 
-## Common Properties
+#### JSON Schema (3)
 
-- [Portal](https://aws.amazon.com/)
+The data models the API reads and writes.
+
+- [App](https://apis.io/schemas/amazon-app-studio/amazon-app-studio-app/)
+- [AppSummary](https://apis.io/schemas/amazon-app-studio/amazon-app-studio-appsummary/)
+- [ListAppsResponse](https://apis.io/schemas/amazon-app-studio/amazon-app-studio-listappsresponse/)
+
+#### JSON Structure (3)
+
+Data models expressed in JSON Structure.
+
+- [Amazon App Studio App Structure](https://apis.io/json-structure/amazon-app-studio/amazon-app-studio-app-structure/)
+- [Amazon App Studio Appsummary Structure](https://apis.io/json-structure/amazon-app-studio/amazon-app-studio-appsummary-structure/)
+- [Amazon App Studio Listappsresponse Structure](https://apis.io/json-structure/amazon-app-studio/amazon-app-studio-listappsresponse-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon App Studio Context](https://apis.io/jsonld/amazon-app-studio/amazon-app-studio-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon App Studio Vocabulary](https://apis.io/vocabularies/amazon-app-studio/amazon-app-studio-vocabulary/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [Amazon App Studio App Example](https://apis.io/examples/amazon-app-studio/amazon-app-studio-app-example/)
+- [Amazon App Studio Appsummary Example](https://apis.io/examples/amazon-app-studio/amazon-app-studio-appsummary-example/)
+- [Amazon App Studio Listappsresponse Example](https://apis.io/examples/amazon-app-studio/amazon-app-studio-listappsresponse-example/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Amazon App Studio Apps API](https://apis.io/collections/amazon-app-studio/open-amazon-app-studio-apps-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Amazon App Studio Openapi Overlay](https://apis.io/overlays/amazon-app-studio/amazon-app-studio-openapi-overlay/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon App Studio — jsonschema rules](https://apis.io/rules/amazon-app-studio/amazon-app-studio-jsonschema-spectral-rules/)
+- [Amazon App Studio API Rules](https://apis.io/rules/amazon-app-studio/amazon-app-studio-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon App Studio Authentication](https://apis.io/security/amazon-app-studio/amazon-app-studio-authentication/)
+- [Amazon App Studio Domain Security](https://apis.io/security/amazon-app-studio/amazon-app-studio-domain-security/)
+- [Amazon App Studio Trust Center](https://apis.io/security/amazon-app-studio/amazon-app-studio-trust-center/)
+- [Amazon App Studio Vulnerability Disclosure](https://apis.io/security/amazon-app-studio/amazon-app-studio-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://aws.amazon.com/app-studio/)
 - [Documentation](https://docs.aws.amazon.com/app-studio/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
+- [Sign up](https://signin.aws.amazon.com/signup?request_type=register)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://us-east-1.console.aws.amazon.com/appstudio/)
-- [SignUp](https://signin.aws.amazon.com/signup?request_type=register)
-- [Status](https://health.aws.amazon.com/health/status)
-- [SpectralRules](rules/amazon-app-studio-spectral-rules.yml)
-- [NaftikoCapability](capabilities/app-studio-management.yaml)
-- [Vocabulary](vocabulary/amazon-app-studio-vocabulary.yaml)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Generative AI Application Builder | Use natural language prompts to generate application layouts, data models, and logic with Amazon Q assistance. |
-| No-Code Application Development | Build internal business applications using drag-and-drop components without writing code. |
-| AWS Data Source Integration | Connect applications to AWS DynamoDB, Aurora, S3, and other data sources with built-in connectors. |
-| Role-Based Access Control | Configure fine-grained access permissions for application users using AWS IAM Identity Center. |
-| One-Click Deployment | Deploy internal applications with a single click and share with team members using AWS access controls. |
+**Kin Score 46.8** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 59.7 |
+| Contract governance | 31.8 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| Internal Business Tools | Build inventory management, employee onboarding, and operational dashboards for internal business use. |
-| Data Entry Applications | Create forms and data entry tools connected to existing databases for field operations and back-office teams. |
-| Workflow Automation | Automate approval workflows, task management, and process tracking with connected business logic. |
-| IT Self-Service Portals | Build IT request portals, asset management tools, and helpdesk applications for internal teams. |
+**Agent readiness 22.8** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Amazon DynamoDB | Connect App Studio applications to DynamoDB for serverless NoSQL data storage and retrieval. |
-| Amazon Aurora | Use Aurora as a relational database backend for App Studio applications requiring structured data. |
-| AWS IAM Identity Center | Manage user access to App Studio applications using IAM Identity Center for single sign-on. |
-| Amazon Q | Leverage Amazon Q generative AI capabilities within App Studio for AI-assisted application development. |
+**Regulatory alignment 32.7** — AI & Biometrics
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-app-studio/](https://apis.io/providers/amazon-app-studio/).
 
-### OpenAPI
+## How this profile is made
 
-- [Amazon App Studio API OpenAPI](openapi/amazon-app-studio-openapi.yaml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### JSON Schema
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon App Studio: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [amazon-app-studio-app-schema.json](json-schema/amazon-app-studio-app-schema.json)
-- [amazon-app-studio-appsummary-schema.json](json-schema/amazon-app-studio-appsummary-schema.json)
-- [amazon-app-studio-listappsresponse-schema.json](json-schema/amazon-app-studio-listappsresponse-schema.json)
+## Open an issue
 
-### JSON-LD
-
-- [amazon-app-studio-context.jsonld](json-ld/amazon-app-studio-context.jsonld)
-
-## Capabilities
-
-- [Amazon App Studio API](capabilities/shared/amazon-app-studio.yaml)
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [App Studio Application Management](capabilities/app-studio-management.yaml) | Amazon App Studio API | 2 | Business Developer, IT Administrator |
-
-## Vocabulary
-
-- [Amazon App Studio Vocabulary](vocabulary/amazon-app-studio-vocabulary.yaml)
-
-## Rules
-
-- [Amazon App Studio Spectral Rules](rules/amazon-app-studio-spectral-rules.yml) — 3 rules
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-app-studio/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
